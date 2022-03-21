@@ -15,7 +15,7 @@
 .custom-nav-item:hover {
   background-color: #dc3545;
   border: solid #dc3545 1px;
-  border-radius: 2px;
+  border-radius: 15px;
 }
 .custom-nav .custom-nav-item {
   color: #ffff !important;
@@ -53,13 +53,21 @@ video {
   color: #fff;
   padding: 10px;
 }
-i {
-  margin-right: 20px;
+.bottom-banner:first-child {
+  padding-left: 50px;
 }
+a.social-hover:hover {
+  padding: 5px;
+  text-decoration: none;
+  background-color: rgb(95, 93, 93);
+}
+/* i {
+  margin-right: 20px;
+} */
 .stripe {
   background-image: linear-gradient(240deg, #ed213a, #93291e);
   padding: 3rem;
-  height: 13rem;
+  height: 14rem;
   margin-top: 4rem;
   transform: rotate(10deg);
   z-index: -5;
@@ -67,7 +75,8 @@ i {
 
 @media screen and (min-width: 0px) and (max-width: 700px) {
   .my-content,
-  .txt-banner {
+  .txt-banner,
+  .stripe {
     display: none;
   }
   .vid-content {
