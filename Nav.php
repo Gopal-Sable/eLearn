@@ -1,4 +1,4 @@
-<nav class="fixed-top navbar navbar-expand-sm navbar-dark  pl-5">
+<nav class="fixed-top navbar navbar-expand-sm navbar-dark bg-dark pl-5">
     <div class="container-fluid">
       <a class="navbar-brand  " href="index.php">e-Learn</a>
       <span class="navbar-text">Learn and Inplement</span>
@@ -9,8 +9,8 @@
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <ul class="navbar-nav  custom-nav pl-5">
           <li class="nav-item custom-nav-item"><a href="index.php" class="nav-link">Home</a></li>
-          <li class="nav-item custom-nav-item"><a href="" class="nav-link">Courses</a></li>
-          <li class="nav-item custom-nav-item"><a href="" class="nav-link">Payment</a></li>
+          <li class="nav-item custom-nav-item"><a href="courses.php" class="nav-link">Courses</a></li>
+          <li class="nav-item custom-nav-item"><a href="paymentstatus.php" class="nav-link">Payment Status</a></li>
           <li class="nav-item custom-nav-item"><a href="" class="nav-link">Myprofile</a></li>
           <li class="nav-item custom-nav-item"><a href="" class="nav-link">Logout</a></li>
           <li class="nav-item custom-nav-item"><a href="" data-bs-toggle="modal" data-bs-target="#exampleModal"

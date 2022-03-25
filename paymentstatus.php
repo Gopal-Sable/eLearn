@@ -26,7 +26,26 @@
     </div>
     <?php
     include("Modal.php");
-    include("courseSection.php");
+  ?>
+  <div class="container">
+    <h2 class="text-center my-4">Payment Status</h2>
+    <form action="" method="post">
+      <div class="form-group row">
+        <label for="" class="offset-sm-3 col-form-label">Order ID:</label>
+        <div>
+          <input type="text" name="txn_id" id="" class="form-control mx-3">
+        </div>
+        <div>
+          <input type="submit" value="View" class="btn btn-primary m-4">
+        </div>
+      </div>
+    </form>
+  </div>
+
+  <?php
+  echo '<div class="container">';
+  include("contactus.php");
+  echo "</div>";
     include("aboutFooter.php");
    
   ?>

@@ -10,15 +10,15 @@
   font-family: "Ubuntu", sans-serif;
   font-size: 2rem;
   font-weight: bold;
-  color: #ffff;
+  color: #fff;
 }
 .custom-nav-item:hover {
   background-color: #dc3545;
   border: solid #dc3545 1px;
-  border-radius: 15px;
+  border-radius: 5px;
 }
 .custom-nav .custom-nav-item {
-  color: #ffff !important;
+  color: #fff !important;
 }
 .remove-vid-marg {
   margin: 0px;
