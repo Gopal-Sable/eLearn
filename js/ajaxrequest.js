@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    $("#studemail").on("keypress blur", function () { 
+    $("#studemail").on("keypress blur", function () {
         let studemail = $("#studemail").val();
         let reg = /^[A-Z0-9._%+-]+@([A-Z0-9-]+\.)+[A-Z]{2,4}$/i;
         $.ajax({
@@ -81,4 +81,32 @@ function clearField() {
     $("#Msg2").html(" ");
     $("#Msg3").html(" ");
     $('#exampleModal').modal('toggle');
+}
+
+// student LOGIN
+function Login() {
+    const email = $("#email").val();
+    const pass = $("#lpass").val();
+    $.ajax({
+        url: "Modal/backend.php",
+        method: "POST",
+        data: {
+            email: email,
+            pass: pass
+        },
+        success: function (data) {
+            if (data == 0) {
+                $("#logStatus").html('<small class="alert alert-danger">Invalid Credentials !</small>');
+            } else if (data == 1) {
+                swal("Good job!", "Login Successful", "success");
+                $('#LoginModal').modal('toggle');
+                setTimeout(() => {
+                    window.location.href = "index.php";
+                }, 1000)
+            } 
+            else {
+                $("#logStatus").html('<small class="alert alert-danger">Internal Server Error!</small>');
+            }
+        },
+    })
 }

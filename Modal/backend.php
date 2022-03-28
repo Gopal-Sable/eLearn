@@ -1,4 +1,7 @@
 <?php
+if (!isset($_SESSION)) {
+  session_start();
+}
 $con=mysqli_connect("localhost","root","","e-learn");
 if(!$con){
     die("Connectioin Failed");
@@ -29,4 +32,23 @@ if (isset($_POST['checkemail'],$_POST['studemail'])) {
 
  }
 
+//student login verification
+if(!isset($_SESSION['is_login'])){
+  if (isset($_POST["email"],$_POST["pass"])) {
+    $email=$_POST["email"];
+    $pass=$_POST["pass"];
+
+    $sql="select email,pass from student where email='".$email."' AND pass='".$pass."'";
+    $result = $con->query($sql);
+    $row=$result->num_rows;
+    if($row === 1){
+      $_SESSION['is_login']=true;
+      $_SESSION['email']=$email;
+      echo json_encode($row);
+
+    }else if($row === 0){
+      echo json_encode($row);
+    }
+  }
+}
 ?>
