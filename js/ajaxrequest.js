@@ -1,12 +1,25 @@
-$(document).ready(function(){
-    $("#studemail").on("keypress blur",function () {
-        let studemail=$("#studemail").val();
+$(document).ready(function () {
+    $("#studemail").on("keypress blur", function () { 
+        let studemail = $("#studemail").val();
+        let reg = /^[A-Z0-9._%+-]+@([A-Z0-9-]+\.)+[A-Z]{2,4}$/i;
         $.ajax({
-            url:'Modal/backend.php',
-            method:"POST",
-            data:{
-                // checkemail:,
-                stuedmail:studemail
+            url: 'Modal/backend.php',
+            method: "POST",
+            data: {
+                checkemail: "checkmail",
+                studemail: studemail
+            },
+            success: function (data) {
+                if (data == 0 && reg.test(studemail)) {
+                    $("#Msg2").html('<small style="color:green;"> There You Go!</small>');
+                    $("#signupBtn").attr("disabled", false);
+                } else if (!reg.test(studemail)) {
+                    $("#Msg2").html('<small style="color:red;"> Please Enter Valid Email </small>');
+                    $("#signupBtn").attr("disabled", true);
+                } else if (data != 0) {
+                    $("#Msg2").html('<small style="color:red;"> Email Already Exist!</small>');
+                    $("#signupBtn").attr("disabled", true);
+                }
             }
         })
     })
@@ -48,12 +61,12 @@ function addUser() {
             success: function (data) {
                 console.log(data)
                 if (data == "ok") {
-                    
+
                     swal("Good job!", "Registration Successful", "success");
                     clearField();
                 }
                 else if (data == "failed") {
-                    
+
                     $('#successMsg').html('<span class="alert alert-danger">Somthing went wrong! Please try again</span>')
                 }
             }

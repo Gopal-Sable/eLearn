@@ -7,7 +7,7 @@
         </div>
         <div class="modal-body">
           <!-- login form start -->
-          <form id="loginform">
+          <form id="AdminForm">
             <div class="form-group">
               <i class="fas fa-envelope"></i>
               <label for="stuemail" class="pl-2 font-weight-bold">Email</label>
