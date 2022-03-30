@@ -37,7 +37,14 @@
     <div class="vid-content">
       <h1>Welcome to e-Learn</h1>
       <small class="my-content">Learn and Implement</small><br>
-      <a href="#" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">Get Started</a>
+      <?php
+        if(!isset($_SESSION['is_login'])){
+          echo ' <a href="#" class="btn btn-danger mt-3" data-bs-toggle="modal" data-bs-target="#exampleModal">Get Started</a>';
+        }else{
+          echo '
+          <a href="#" class="btn btn-primary mt-3" >My Profile</a>';
+        }
+      ?>
     </div>
   </div>
   <!-- Viedo background end -->
@@ -102,6 +109,7 @@ include("Modal.php");
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"crossorigin="anonymous"></script> -->
 <script src="js/ajaxrequest.js"></script>
+<script src="Admin/AdminAjax.js"></script>
 </body>
 
 </html>
