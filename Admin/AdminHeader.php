@@ -32,12 +32,12 @@
                             </a>
                         </li>
                         <li class="px-2  nav-item">
-                            <a href="#" class="nav-link">
+                            <a href="Lessons.php" class="nav-link">
                                 <i class="px-2  fab fa-accessible-icon"></i>Lessons
                             </a>
                         </li>
                         <li class="px-2  nav-item">
-                            <a href="#" class="nav-link">
+                            <a href="student.php" class="nav-link">
                                 <i class="px-2  fas fa-users"></i>Students
                             </a>
                         </li>
@@ -54,11 +54,6 @@
                         <li class="px-2  nav-item">
                             <a href="#" class="nav-link">
                                 <i class="px-2  fab fa-accessible-icon"></i>Feedback
-                            </a>
-                        </li>
-                        <li class="px-2  nav-item">
-                            <a href="#" class="nav-link">
-                                <i class="px-2  fas fa-key"></i>Change Password
                             </a>
                         </li>
                         <li class="px-2  nav-item">

@@ -1,4 +1,10 @@
 <?php
+if (!isset($_SESSION)) {
+    session_start();
+}
+if(!isset($_SESSION['is_admin'],$_SESSION['adminEmail'])){
+    header("refresh:0.001; url=../index.php");
+}
 include("adminHeader.php")
 ?>
             <div class="col-sm-9 mt-5">

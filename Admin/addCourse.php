@@ -1,4 +1,12 @@
 <?php
+if (!isset($_SESSION)) {
+    session_start();
+}
+if(!isset($_SESSION['is_admin'],$_SESSION['adminEmail'])){
+    header("refresh:0.001; url=../index.php");
+}
+
+
     include("AdminHeader.php");
     include("../DB/dbConnection.php");
     $msg=$msg_err="";
@@ -12,6 +20,7 @@
         $course_duration=$_POST["course_duration"];
         $original_price=$_POST["original_price"];
         $price=$_POST["price"];
+        
         // $course_img=$_FILES['course_img']['name'];
         // $temp=$_FILES['course_img']['temp_name'];
         // $img_folder="../image/courseImg/".$course_img;
