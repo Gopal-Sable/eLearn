@@ -58,8 +58,7 @@ include("AdminHeader.php");
             $q="delete from course where id= {$_REQUEST['id']}";
             if(mysqli_query($con,$q))
             {
-                echo '<meta http-equiv="refresh" content"0;URL=?deleted"/>';
-               
+                echo '<meta http-equiv="refresh" content"0;URL=?deleted"/>';  
             }else {
                 echo '<script>swal("Oops..", "Something went wrong!", "error")</script>';
                
