@@ -10,16 +10,7 @@
             <input type="submit" value="Send" class="btn btn-primary"><br><br>
         </form>
     </div>
-    <div class="col-sm-4 stripe text-white text-center">
-        <h4>e-Learn</h4>
-        <p>e-Learn, <br>
-            Near Deogiri College, <br>
-            Station Road,Aurangabad <br>
-            Maharashtra-431005 <br>
-            Phone:+13456879 <br>
-            www.e-Learn.com
-        </p>
-    </div>
+
 </div>
 <!-- 1st column end -->
 

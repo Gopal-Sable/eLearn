@@ -3,44 +3,45 @@
   <h1 class="text-center">Popular Courses</h1>
   <!-- card -->
 
-  <div className="row">
-    <div className="col md-4 my-4">
 
-      <div class="card" style="width: 18rem;">
-        <img src="image/1.jpg" class="card-img-top" alt="image/1.jpg">
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-            content.</p>
-          <p class="card-text d-inline">Price:<small>
-              <del>&#8377 200</del>
-            </small>
-            <span class="font-weight-bolder">&#8377 200</span>
-          </p>
-          <a href="#" class="btn btn-primary">Enroll</a>
-        </div>
-      </div>
 
-    </div>
 
-    <div className="col md-4 my-4">
-      <div class="card" style="width: 18rem;">
-        <img src="image/1.jpg" class="card-img-top" alt="image/1.jpg">
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-            content.</p>
-          <p class="card-text d-inline">Price:<small>
-              <del>&#8377 200</del>
-            </small>
-            <span class="font-weight-bolder">&#8377 200</span>
-          </p>
-          <a href="#" class="btn btn-primary">Enroll</a>
-        </div>
+  <?php
+  // $q="select * from course LIMIT 3";
+  $q = "select * from course ";
+  $result = $con->query($q);
+  if ($result->num_rows > 0) {
+    while ($row = $result->fetch_assoc()) {
+
+      echo ' 
+    <div className="row">
+      <div className="col md-4 my-4">
+        <div class="card" style="width: 18rem;">
+          <img src="image/upload/' . $row['course_img'] . '" class="card-img-top" alt="image/1.jpg">
+          <div class="card-body">
+            <h5 class="card-title">' . $row['course_name'] . '</h5>
+            <p class="card-text">' . $row['course_desc'] . '</p>
+            <p className="card-text"><small className="text-muted"> - ' . $row["Author"] . ' </small></p>
+                       
+            <p class="card-text d-inline">Price:<small>
+                <del>&#8377 ' . $row['orignal_price'] . '</del>
+              </small>
+              <span class="font-weight-bolder">&#8377  ' . $row['price'] . '</span>
+            </p>
+            <a href="coursedetails.php?id=' . $row['id'] . '" class="btn btn-primary">Enroll</a>
+          </div>
       </div>
     </div>
+ ';
+    }
+  }
 
-  </div>
+  ?>
+
+
+
+
+
 
   <!-- card -->
 

@@ -14,6 +14,15 @@
             </div>
           </div>
         </div> -->
+      <?php
+      $sql = "select s.name, s.profession, f.feedback from student as s join feedback as f on s.id=f.stu_id";
+      $result = $con->query($sql);
+      if ($result->num_rows > 0) {
+        while ($row = $result->fetch_assoc()) {
+          echo $row['name'] . $row['profession'] . $row['feedback'] . "<br>";
+        }
+      }
+      ?>
 
       <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
         <div class="carousel-indicators">
