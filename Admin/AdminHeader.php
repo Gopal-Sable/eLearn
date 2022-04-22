@@ -52,7 +52,7 @@
                             </a>
                         </li>
                         <li class="px-2  nav-item">
-                            <a href="#" class="nav-link">
+                            <a href="feedback.php" class="nav-link">
                                 <i class="px-2  fab fa-accessible-icon"></i>Feedback
                             </a>
                         </li>
