@@ -5,8 +5,6 @@ if (!isset($_SESSION)) {
 if(!isset($_SESSION['is_admin'],$_SESSION['adminEmail'])){
     header("refresh:0.001; url=../index.php");
 }
-
-
     include("AdminHeader.php");
     include("../DB/dbConnection.php");
     $msg=$msg_err="";
@@ -18,8 +16,6 @@ if(!isset($_SESSION['is_admin'],$_SESSION['adminEmail'])){
         $email = $_POST["email"];
         $pass =$_POST["pass"];
         $occupation=$_POST["occupation"];
-        
-    
         $sql="insert into student(name,email,pass,profession) value('$name','$email','$pass','$occupation')";
         if (mysqli_query($con,$sql)) {
             $msg='';

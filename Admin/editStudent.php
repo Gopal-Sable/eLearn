@@ -27,10 +27,7 @@ if (isset($_POST['update'])) {
 if (isset($_POST['submit'])) {
     $q="select * from student where id={$_POST['id']} ";
     $result=mysqli_query($con , $q);
-    $row=$result->fetch_assoc();
-    
-
-    
+    $row=$result->fetch_assoc(); 
 ?>
 <div class="col-sm-5 mt-5 mx-3 jumbotron">
     <h3 class="text-center">Update Student Info</h3>

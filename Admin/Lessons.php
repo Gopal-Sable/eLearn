@@ -17,8 +17,6 @@ include("../DB/dbConnection.php");
         </div>
         <button type="submit" class=" btn btn-primary">Search</button>
     </form>
-
-
     <?php
     $sql = "select id from course";
     $result = $con->query($sql);

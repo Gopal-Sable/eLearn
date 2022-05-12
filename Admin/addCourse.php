@@ -5,8 +5,6 @@ if (!isset($_SESSION)) {
 if(!isset($_SESSION['is_admin'],$_SESSION['adminEmail'])){
     header("refresh:0.001; url=../index.php");
 }
-
-
     include("AdminHeader.php");
     include("../DB/dbConnection.php");
     $msg=$msg_err="";
@@ -20,11 +18,6 @@ if(!isset($_SESSION['is_admin'],$_SESSION['adminEmail'])){
         $course_duration=$_POST["course_duration"];
         $original_price=$_POST["original_price"];
         $price=$_POST["price"];
-        
-        // $course_img=$_FILES['course_img']['name'];
-        // $temp=$_FILES['course_img']['temp_name'];
-        // $img_folder="../image/courseImg/".$course_img;
-        // move_uploaded_file($temp,$img_folder);
         $NewImageName= "";
          //image upload
          $output_dir = "../image/upload";/* Path for file upload */

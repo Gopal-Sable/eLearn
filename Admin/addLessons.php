@@ -5,8 +5,6 @@ if (!isset($_SESSION)) {
 if (!isset($_SESSION['is_admin'], $_SESSION['adminEmail'])) {
     header("refresh:0.001; url=../index.php");
 }
-
-
 include("AdminHeader.php");
 include("../DB/dbConnection.php");
 $msg = $msg_err = "";

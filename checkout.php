@@ -41,12 +41,6 @@ $OderID = uniqid();
 
                                 <button type="submit" id="rzp-button1" class="btn  btn-primary" value=" <?php echo $_POST['checkout'] ?>" name="amount">Pay Now : <?php echo $_POST['checkout'] ?></button>
                             </div>
-
-
-
-                            <!-- <input type="hidden" value="" name="oderId">
-                            <input type="hidden" value="" name="" readonly> -->
-
                         </div>
                     </div>
                 </form>

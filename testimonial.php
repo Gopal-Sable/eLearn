@@ -30,7 +30,6 @@
           <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
           <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
         </div>
-
         <div class="carousel-inner">
           <div class="carousel-item active " data-bs-interval="10000">
             <div class="carousel  d-md-block">
@@ -38,9 +37,6 @@
               <p>Some representative placeholder content for the first slide.</p>
             </div>
           </div>
-
-
-
           <div class="carousel-item " data-bs-interval="2000">
             <div class="carousel  d-md-block">
               <h5>Second slide label</h5>
@@ -66,8 +62,6 @@
           <span class="visually-hidden">Next</span>
         </button>
       </div>
-
-
     </div>
   </div>
 

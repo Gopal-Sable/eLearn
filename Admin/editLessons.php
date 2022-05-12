@@ -12,8 +12,6 @@ if (isset($_POST['update'])) {
     $id = $_POST['ID'];
     $name = $_POST['name'];
     $desc = $_POST['lesson_desc'];
-
-
     $sql = "update lesson set name='$name' , course_desc='$desc' , Author='$Author' , duration='$duration' , price='$price' , orignal_price='$Oprice' where id='$id'";
     if (mysqli_query($con, $sql) == TRUE) {
         echo '<script>swal("Great" ,  "Record Updated Successfully" ,  "success")</script>';
@@ -27,9 +25,6 @@ if (isset($_POST['submit'])) {
     $q = "select * from lesson where id={$_POST['id']} ";
     $result = mysqli_query($con, $q);
     $row = $result->fetch_assoc();
-
-
-
 ?>
     <div class="col-sm-5 mt-5 mx-3 jumbotron">
         <h3 class="text-center">Update Lesson</h3>
