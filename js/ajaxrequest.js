@@ -62,7 +62,7 @@ function addUser() {
                 console.log(data)
                 if (data == "ok") {
 
-                    swal("Good job!", "Registration Successful", "success");
+                    swal("Good job!", "Registration Successful. You Can Login Now ", "success");
                     clearField();
                 }
                 else if (data == "failed") {
@@ -103,7 +103,7 @@ function Login() {
                 setTimeout(() => {
                     window.location.href = "index.php";
                 }, 1000)
-            } 
+            }
             else {
                 $("#logStatus").html('<small class="alert alert-danger">Internal Server Error!</small>');
             }

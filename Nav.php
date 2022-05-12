@@ -9,7 +9,7 @@
       <ul class="navbar-nav  custom-nav pl-5">
         <li class="nav-item custom-nav-item"><a href="index.php" class="nav-link">HOME</a></li>
         <li class="nav-item custom-nav-item"><a href="courses.php" class="nav-link">COURSES</a></li>
-        <li class="nav-item custom-nav-item"><a href="paymentstatus.php" class="nav-link">PAYMENT STATUS</a></li>
+        <li class="nav-item custom-nav-item"><a href="paymentstatus.php#pay" class="nav-link">PAYMENT STATUS</a></li>
         <?php
         session_start();
         if (isset($_SESSION['is_login'])) {
@@ -25,8 +25,7 @@
         }
         ?>
 
-        <li class="nav-item custom-nav-item"><a href="" class="nav-link">CONTACT US</a></li>
-        <li class="nav-item custom-nav-item"><a href="" class="nav-link">FEEDBACK</a></li>
+        <li class="nav-item custom-nav-item"><a href="index.php#Contact" class="nav-link">CONTACT US</a></li>
       </ul>
     </div>
   </div>

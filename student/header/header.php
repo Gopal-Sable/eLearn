@@ -66,5 +66,4 @@ if (isset($Email)) {
                     </ul>
                 </div>
             </nav>
-        </div>
-    </div>
+      
